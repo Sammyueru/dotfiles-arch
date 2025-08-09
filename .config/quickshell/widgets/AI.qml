@@ -1,9 +1,12 @@
 import Quickshell
+import Quickshell.Hyprland
+import Quickshell.Wayland
 import QtQuick
 import QtQuick.Controls
 
 PanelWindow {
-    width: 350
+    id: ai_window
+    implicitWidth: 500
     color: "transparent"
     aboveWindows: true
     anchors {
@@ -12,9 +15,15 @@ PanelWindow {
         bottom: true
     }
 
+    WlrLayershell.namespace: "Window_AI"
+    WlrLayershell.layer: WlrLayer.Top
+    WlrLayershell.exclusiveZone: 0
+
     Rectangle {
         anchors.fill: parent
-        anchors.margins: 4
+        anchors.margins: 40
+        anchors.topMargin: 150
+        anchors.bottomMargin: anchors.topMargin
         radius: 14
         color: "#000000"
         border.color: "#ffc9fa"
@@ -38,6 +47,10 @@ PanelWindow {
                     color: "#ff0000"
                     anchors.centerIn: parent
                 }
+            }
+
+            onClicked: {
+                ai_window.visible = false;
             }
         }
     }
