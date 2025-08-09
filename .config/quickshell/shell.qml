@@ -2,6 +2,7 @@ import Quickshell
 import "./widgets"
 
 Scope {
-    // AI {}
+    LaunchBar {}
+    AI {}
 }
 
