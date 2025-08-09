@@ -5,6 +5,7 @@ Rice for the practical human (whom also likes life with a little spice).
 ## LICENSE
 
 Samm's Arch Linux dotfiles
+
 Copyright (C) 2025 Samm
 
 This program is free software: you can redistribute it and/or modify
