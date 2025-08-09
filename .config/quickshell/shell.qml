@@ -1,8 +1,7 @@
 import Quickshell
+import "./widgets"
 
 Scope {
-    widgets {
-        ai {}
-    }
+    // AI {}
 }
 
