@@ -38,7 +38,11 @@ PanelWindow {
             }
 
             LB.Btn {
-                txt: ""
+                txt: "Bio"
+            }
+
+            LB.Btn {
+                txt: "SET"
             }
         }
     }
