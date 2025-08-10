@@ -1,11 +1,13 @@
 import Quickshell
-import Quickshell.Hyprland
 import Quickshell.Wayland
 import QtQuick
 import QtQuick.Controls
 
+import "../"
+
 PanelWindow {
     id: ai_window
+    visible: Bus.windows.ai
     implicitWidth: 500
     color: "transparent"
     aboveWindows: true
@@ -25,7 +27,7 @@ PanelWindow {
         anchors.topMargin: 150
         anchors.bottomMargin: anchors.topMargin
         radius: 14
-        color: "#000000"
+        color: "#e8a7e4"
         border.color: "#ffc9fa"
         border.width: 3
 
@@ -50,7 +52,7 @@ PanelWindow {
             }
 
             onClicked: {
-                ai_window.visible = false;
+                Bus.windows.ai = false;
             }
         }
     }
