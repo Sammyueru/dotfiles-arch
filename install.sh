@@ -1,6 +1,6 @@
 #!/bin/bash
 # Samm's Arch Linux dotfiles installer
-# See LICENSE.txt file
+# Copyright (c) 2025, Samm. See LICENSE.txt file
 
 echo "Samm's Arch Linux dotfiles installer."
 echo "Copyright (c) 2025, Samm. See LICENSE.txt file."
