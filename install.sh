@@ -29,3 +29,26 @@ else
 
 fi
 
+echo "Updating system packages..."
+sudo pacman -Syu --noconfirm
+
+echo "Checking if Python 3 is installed."
+if command -v python3 &> /dev/null then
+    echo "Python 3 not installed."
+    echo "Installing..."
+    sudo pacman -S python3 --noconfirm
+    echo "Installed Python 3."
+else
+    echo "Python 3 is installed."
+fi
+
+echo "Checking if pip is installed."
+if ! command -v pip &> /dev/null then
+    echo "pip not installed."
+    echo "Installing..."
+    sudo pacman -S --noconfirm python-pip
+else
+    echo "pip is installed."
+fi
+
+sudo python3 ./build.py
