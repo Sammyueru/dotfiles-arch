@@ -31,6 +31,7 @@ PanelWindow {
             spacing: 10
 
             LB.Btn {
+                visible: Bus.launch_bar.buttons.ai
                 txt: "AI"
                 onClicked: {
                     Bus.windows.ai = !Bus.windows.ai
@@ -38,6 +39,7 @@ PanelWindow {
             }
 
             LB.Btn {
+                visible: Bus.launch_bar.buttons.bio
                 txt: "Bio"
             }
 

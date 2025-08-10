@@ -8,5 +8,12 @@ QtObject {
     property QtObject windows: QtObject {
         property bool ai: false
     }
+    
+    property QtObject launch_bar: QtObject {
+        property QtObject buttons: QtObject {
+            property bool ai: true
+            property bool bio: true
+        }
+    }
 }
 
