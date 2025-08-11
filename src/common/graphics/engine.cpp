@@ -29,6 +29,6 @@ SDL_Window* GFXEngine::Get_Window() {
     return this->window;
 }
 
-SDL_Window* GFXEngine::Get_Renderer() {
+SDL_Renderer* GFXEngine::Get_Renderer() {
     return this->renderer;
 }
