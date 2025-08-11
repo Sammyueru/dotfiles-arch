@@ -1,0 +1,4 @@
+[submodule "src/common/ai/llama"]
+	path = src/common/ai/llama
+	url = https://github.com/ggml-org/llama.cpp.git
+	branch = tags/master-b6133

@@ -51,4 +51,7 @@ else
     echo "pip is installed."
 fi
 
+echo "Initializing git submodules."
+git submodule update --init --recursive
+
 sudo python3 ./build.py
