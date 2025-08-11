@@ -3,6 +3,8 @@ import Quickshell.Io
 import QtQuick
 import QtQuick.Controls
 
+import "../../"
+
 Button {
     id: root
     property string txt
@@ -14,11 +16,11 @@ Button {
     background: Rectangle {
         width: parent.width
         height: parent.width
-        color: parent.pressed ? "#005588" : (parent.hovered ? "#4488ff" : "#2288aa")
+        color: parent.pressed ? Bus.themes[Bus.theme].colors.button_pressed[0] : (parent.hovered ? Bus.themes[Bus.theme].colors.button_hover[0] : Bus.themes[Bus.theme].colors.button[0])
         radius: 10
         Text {
             text: root.txt
-            color: "#e8a7e4"
+            color: Bus.themes[Bus.theme].colors.button_text[0]
             anchors.centerIn: parent
         }
         anchors.centerIn: parent

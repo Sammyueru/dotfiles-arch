@@ -17,9 +17,9 @@ PanelWindow {
     }
 
     Rectangle {
-        color: "#e8a7e4"
+        color: Bus.themes[Bus.theme].colors.body[0]
         border.width: 4
-        border.color: "#ffffff"
+        border.color: Bus.themes[Bus.theme].colors.outlines[0]
         radius: 16
         anchors.margins: 4
         anchors.fill: parent

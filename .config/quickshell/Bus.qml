@@ -15,5 +15,42 @@ QtObject {
             property bool bio: true
         }
     }
+
+    property int theme: 1
+    property list<QtObject> themes: [
+        // [0]. dark
+        QtObject {
+            property list<string> outlines: [
+
+            ]
+        },
+        // [1]. pink
+        QtObject {
+            property QtObject colors: QtObject {
+                property list<string> outlines: [
+                    "#ffffff",
+                    "#ffc9fa",
+                    "#4488ff",
+                ]
+                property list<string> body: [
+                    "#e8a7e4",
+                    "#4488ff",
+                ]
+                property list<string> button: [
+                    "#4488ff",
+                    "#e8a7e4",
+                ]
+                property list<string> button_hover: [
+                    "#2288aa",
+                ]
+                property list<string> button_pressed: [
+                    "#005588",
+                ]
+                property list<string> button_text: [
+                    "#e8a7e4",
+                ]
+            }
+        }
+    ]
 }
 
