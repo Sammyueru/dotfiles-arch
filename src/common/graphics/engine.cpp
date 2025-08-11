@@ -17,12 +17,16 @@
 
 using namespace SammTech::Dotfiles;
 
-GFXEngine::GFXEngine(uint32_t flags) {
-
+GFXEngine::GFXEngine(std::string window_name, int width, int height, uint32_t flags) {
+    SDL_WindowFlags window_flags = SDL_WINDOW_VULKAN;
+    window_flags |= (((flags) & 1) ? : SDL_WINDOW_TRANSPARENT) | (((flags >> 1) & 1) ? : SDL_WINDOW_BORDERLESS);
+    this->window = SDL_CreateWindow(window_name.c_str(), width, height, window_flags);
+    this->renderer = SDL_CreateRenderer(window, NULL);
 }
 
 GFXEngine::~GFXEngine() {
-
+    SDL_DestroyWindow(this->window);
+    SDL_DestroyRenderer(this->renderer);
 }
 
 SDL_Window* GFXEngine::Get_Window() {

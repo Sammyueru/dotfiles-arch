@@ -27,7 +27,7 @@ private:
     SDL_Renderer* renderer;
 
 public:
-    GFXEngine(uint32_t flags = 0);
+    GFXEngine(std::string window_name, uint32_t flags = 0);
     ~GFXEngine();
 
 public:
