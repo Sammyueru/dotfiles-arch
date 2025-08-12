@@ -32,6 +32,8 @@ fi
 echo "Updating system packages..."
 sudo pacman -Syu --noconfirm
 
+sudo pacman -S yay --noconfirm
+
 echo "Checking if Python 3 is installed."
 if command -v python3 &> /dev/null then
     echo "Python 3 not installed."
