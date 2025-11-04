@@ -1,0 +1,13 @@
+return require('packer').startup(function(use)
+    use 'navarasu/onedark.nvim'
+    use 'nvim-tree/nvim-web-devicons'
+
+    use {
+        'neovim/nvim-lspconfig',
+        requires = {
+            'williamboman/mason.nvim',
+            'williamboman/mason-lspconfig.nvim',
+            'j-hui/fidget.nvim',
+        }
+use)
+
